@@ -1,9 +1,14 @@
 import React, { useEffect, useState } from "react";
 
 const ThemeToggleButton = () => {
-  const [theme, setTheme] = useState(
-    typeof window !== "undefined" ? localStorage.getItem("theme") : "light",
-  );
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setTheme(storedTheme);
+    }
+  }, []);
 
   useEffect(() => {
     if (theme === "dark") {

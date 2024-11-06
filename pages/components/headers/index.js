@@ -3,18 +3,15 @@ import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
 import { cn } from "@/lib/utils";
 
-import ThemeToggleButton from "@/utils.js/mode";
+import ThemeToggleButton from "@/utils/mode";
 
 function Navbar({ className }) {
   const [active, setActive] = useState(null);
   return (
     <div
-      className={cn(
-        "fixed  inset-x-0 max-w-2xl mx-auto z-50 min-w-full bg-transparent border-transparent",
-        className,
-      )}
+      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
     >
-      <Menu setActive={setActive}>
+      <Menu setActive={setActive} className="py-2">
         <MenuItem setActive={setActive} active={active} item="Services">
           <div className="flex flex-col space-y-4 text-sm">
             <ThemeToggleButton />
