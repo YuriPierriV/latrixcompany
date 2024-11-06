@@ -1,6 +1,8 @@
 import "/styles/globals.css";
-
 import Head from "next/head";
+
+// Importe o ThemeProvider do seu arquivo de contexto
+import { ThemeProvider } from "@/utils/modeContext";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -8,7 +10,10 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Component {...pageProps} />
+      {/* Envolva o Component com o ThemeProvider */}
+      <ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

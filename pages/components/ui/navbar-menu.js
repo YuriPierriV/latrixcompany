@@ -7,7 +7,6 @@ import Image from "next/image";
 const transition = {
   type: "spring",
   mass: 0.5,
-  damping: 11.5,
   stiffness: 100,
   restDelta: 0.001,
   restSpeed: 0.001,
@@ -15,10 +14,10 @@ const transition = {
 
 export const MenuItem = ({ setActive, active, item, children }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div onMouseEnter={() => setActive(item)} className="relative py-4">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white text-base"
       >
         {item}
       </motion.p>
@@ -29,7 +28,7 @@ export const MenuItem = ({ setActive, active, item, children }) => {
           transition={transition}
         >
           {active === item && (
-            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className="absolute top-[calc(100%_+_1rem)] left-1/2 transform -translate-x-1/2 pt-3">
               <motion.div
                 transition={transition}
                 // layoutId ensures smooth animation
@@ -57,7 +56,7 @@ export const Menu = ({ setActive, children }) => {
     <nav
       // resets the state
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border border-black/[0.2] dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8 py-4 "
+      className="relative rounded-xl border border-black/[0.2] dark:bg-black dark:border-white/[0.2] bg-white shadow-input flex justify-center space-x-4 px-8  items-center max-h-16 h-16"
     >
       {children}
     </nav>
