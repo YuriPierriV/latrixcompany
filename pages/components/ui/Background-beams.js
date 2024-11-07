@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/Utils";
-import { TextHoverEffect } from "./Text-hover-effect";
+
+import cn from "@/lib/Utils";
 
 export const BackgroundBeams = React.memo(({ className }) => {
   const paths = [

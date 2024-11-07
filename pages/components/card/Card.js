@@ -27,4 +27,14 @@ const CardContainer = ({ children }) => {
   );
 };
 
+const Card = ({ title, description, children }) => {
+  return (
+    <CardContainer>
+      <CardTitle title={title} description={description} />
+      {children}
+    </CardContainer>
+  );
+};
+
 export { CardTitle, CardContainer };
+export default Card;

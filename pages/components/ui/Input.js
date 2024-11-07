@@ -1,7 +1,7 @@
 // Input component extends from shadcnui - https://ui.shadcn.com/docs/components/input
 "use client";
 import * as React from "react";
-import { cn } from "@/lib/Utils";
+import cn from "@/lib/Utils";
 import { useMotionTemplate, useMotionValue, motion } from "framer-motion";
 
 const Input = React.forwardRef(({ className, type, ...props }, ref) => {
@@ -53,4 +53,4 @@ const Input = React.forwardRef(({ className, type, ...props }, ref) => {
 });
 Input.displayName = "Input";
 
-export { Input };
+export default Input;

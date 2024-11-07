@@ -36,3 +36,5 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
+
+export default useTheme;

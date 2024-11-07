@@ -162,3 +162,5 @@ export const GoogleGeminiEffect = ({
     </div>
   );
 };
+
+export default GoogleGeminiEffect;

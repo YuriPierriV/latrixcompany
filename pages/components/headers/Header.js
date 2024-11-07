@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/Navbar-menu";
-import { cn } from "@/lib/Utils";
+import cn from "@/lib/Utils";
 import Image from "next/image";
 import lightImage from "../public/images/light.png";
 import darkImage from "../public/images/dark.png";

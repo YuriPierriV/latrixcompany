@@ -122,3 +122,5 @@ export const TextHoverEffect = ({ text, duration }) => {
     </svg>
   );
 };
+
+export default TextHoverEffect;

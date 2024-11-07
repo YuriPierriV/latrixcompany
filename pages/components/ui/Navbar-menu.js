@@ -95,3 +95,5 @@ export const HoveredLink = ({ children, ...rest }) => {
     </Link>
   );
 };
+
+export default Menu;

@@ -10,6 +10,8 @@ import card_white_1 from ".//card_white_1.png";
 import card_white_2 from ".//card_white_2.png";
 import card_white_3 from ".//card_white_3.png";
 
+import dark from ".//dark.png";
+
 import foguete from ".//foguete.png";
 
 export {
@@ -21,3 +23,5 @@ export {
   card_white_3,
   foguete,
 };
+
+export default dark;

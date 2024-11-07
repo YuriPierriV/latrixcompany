@@ -121,3 +121,5 @@ export const MovingBorder = ({
     </>
   );
 };
+
+export default Button;

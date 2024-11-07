@@ -7,7 +7,7 @@ import React, {
   useContext,
 } from "react";
 
-import { cn } from "@/lib/Utils";
+import cn from "@/lib/Utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useOutsideClick } from "pages/hooks/Use-outside-click";
@@ -301,3 +301,5 @@ export const BlurImage = ({ height, width, src, className, alt, ...rest }) => {
     />
   );
 };
+
+export default Card;

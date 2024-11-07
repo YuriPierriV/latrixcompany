@@ -1,23 +1,20 @@
-import styles from "./inicio.module.css";
 import Navbar from "@/headers/Header";
-import { TextHoverEffect } from "@/ui/Text-hover-effect";
-import BackgroundBeams from "@/ui/Background-beams";
-import { GoogleGeminiEffect } from "@/ui/Google-gemini-effect";
-import { useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
-
-import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "@/ui/Hero-highlight";
-import { CardTitle, CardContainer } from "@/card/Card";
-import { Card, Carousel } from "@/ui/Apple-cards-carousel";
-
 import React, { useEffect, useState } from "react";
 
-import lightImage from "@/public/images/dark.png";
+import { useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+import { HeroHighlight, Highlight } from "@/ui/Hero-highlight";
+
+import { CardTitle, CardContainer } from "@/card/Card";
+import { Card, Carousel } from "@/ui/Apple-cards-carousel";
+import Timeline from "@/ui/Timeline";
+import { dataTimeline } from "@/ui/Timeline";
+
 import { useTheme } from "@/utils/ThemeContext";
-import { Timeline } from "@/ui/Timeline";
-import { dataTimeline } from "@/timeline/Timeline";
-import { Form } from "@/form/Form";
+
+import Form from "@/form/Form";
 
 import {
   card_dark_1,
@@ -68,7 +65,7 @@ function Inicio() {
       <div className="relative w-full flex items-center justify-center">
         <Navbar className="top-2" />
       </div>
-      <section id={styles.hero}>
+      <section id="hero">
         <HeroHighlight className="grid xl:grid-cols-2 gap-4 min-h-full  container mx-auto">
           <div className="items-center grid grid-cols-1 justify-center pt-24  xl:py-20 gap-4">
             <div className=" p-0">

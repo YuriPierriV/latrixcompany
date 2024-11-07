@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/lib/Utils";
+import cn from "@/lib/Utils";
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 import React from "react";
 
@@ -75,3 +75,5 @@ export const Highlight = ({ children, className }) => {
     </motion.span>
   );
 };
+
+export default Highlight;

@@ -2,7 +2,7 @@ import "/styles/globals.css";
 import Head from "next/head";
 
 // Importe o ThemeProvider do seu arquivo de contexto
-import { ThemeProvider } from ".//components/utils/ThemeContext";
+import { ThemeProvider } from "@/utils/ThemeContext";
 
 function MyApp({ Component, pageProps }) {
   return (
