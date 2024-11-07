@@ -24,4 +24,6 @@ export {
   foguete,
 };
 
-export default dark;
+export default function Image() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+}
