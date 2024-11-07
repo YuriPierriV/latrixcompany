@@ -130,12 +130,12 @@ function Inicio() {
       <div className="container min-w-full h-full flex justify-center bg-slate-200 dark:bg-[#212529] ">
         <CardContainer>
           <div className="grid xl:grid-cols-2 gap-3">
-            <div className="flex flex-col gap-0">
+            <div className="flex flex-col gap-0 w-full">
               <CardTitle
                 title="Dê o Próximo Passo para Impulsionar Sua Marca"
                 description="Preencha o formulário em menos de um minuto."
               />
-              <Timeline data={dataTimeline} className="flex-1" />
+              <Timeline data={dataTimeline} className="flex-1 " />
             </div>
             <div className="row-span-2">
               <Form className="h-full w-full " />
