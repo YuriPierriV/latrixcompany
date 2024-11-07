@@ -1,5 +1,5 @@
 "use client";
-import { cn } from "@/lib/Utils";
+import cn from "@/lib/Utils";
 import { motion } from "framer-motion";
 import React from "react";
 import { Button } from "./Moving-border";
