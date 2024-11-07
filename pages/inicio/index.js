@@ -9,7 +9,7 @@ import { HeroHighlight, Highlight } from "@/ui/Hero-highlight";
 
 import { CardTitle, CardContainer } from "@/card/Card";
 import { Card, Carousel } from "@/ui/Apple-cards-carousel";
-import Timeline from "@/ui/Timeline";
+import { Timeline } from "@/ui/Timeline";
 import { dataTimeline } from "@/ui/Timeline";
 
 import { useTheme } from "@/utils/ThemeContext";

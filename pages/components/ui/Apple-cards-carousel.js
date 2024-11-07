@@ -1,4 +1,3 @@
-"use client";
 import React, {
   useEffect,
   useRef,
@@ -10,7 +9,7 @@ import React, {
 import cn from "@/lib/Utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useOutsideClick } from "pages/hooks/Use-outside-click";
+import useOutsideClick from "pages/hooks/Use-outside-click";
 
 export const CarouselContext = createContext({
   onCardClose: () => {},
@@ -302,4 +301,6 @@ export const BlurImage = ({ height, width, src, className, alt, ...rest }) => {
   );
 };
 
-export default Card;
+export default function Apple() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+}
