@@ -1,5 +1,5 @@
 import React from "react";
-import BackgroundBeams from "@/ui/background-beams";
+import BackgroundBeams from "@/ui/Background-beams";
 
 const CardTitle = ({ children, imgSrc, title, description }) => {
   return (

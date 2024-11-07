@@ -1,12 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
-import { cn } from "@/lib/utils";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/Navbar-menu";
+import { cn } from "@/lib/Utils";
 import Image from "next/image";
 import lightImage from "../public/images/light.png";
 import darkImage from "../public/images/dark.png";
 
-import ThemeToggleButton from "@/utils/mode";
+import ThemeToggleButton from "@/utils/Mode";
 import { useTheme } from "@/utils/ThemeContext";
 
 function Navbar({ className }) {

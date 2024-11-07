@@ -1,21 +1,21 @@
 import styles from "./inicio.module.css";
-import Navbar from "@/headers";
-import { TextHoverEffect } from "@/ui/text-hover-effect";
-import BackgroundBeams from "@/ui/background-beams";
-import { GoogleGeminiEffect } from "@/ui/google-gemini-effect";
+import Navbar from "@/headers/Header";
+import { TextHoverEffect } from "@/ui/Text-hover-effect";
+import BackgroundBeams from "@/ui/Background-beams";
+import { GoogleGeminiEffect } from "@/ui/Google-gemini-effect";
 import { useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
 import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "@/ui/hero-highlight";
+import { HeroHighlight, Highlight } from "@/ui/Hero-highlight";
 import { CardTitle, CardContainer } from "@/card/Card";
-import { Card, Carousel } from "@/ui/apple-cards-carousel";
+import { Card, Carousel } from "@/ui/Apple-cards-carousel";
 
 import React, { useEffect, useState } from "react";
 
 import lightImage from "@/public/images/dark.png";
 import { useTheme } from "@/utils/ThemeContext";
-import { Timeline } from "@/ui/timeline";
+import { Timeline } from "@/ui/Timeline";
 import { dataTimeline } from "@/timeline/Timeline";
 import { Form } from "@/form/Form";
 
@@ -27,7 +27,7 @@ import {
   card_white_2,
   card_white_3,
   foguete,
-} from "@/public/images/images";
+} from "@/public/images/Images";
 
 function Inicio() {
   const ref = React.useRef(null);

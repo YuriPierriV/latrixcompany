@@ -1,8 +1,8 @@
 "use client";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/Utils";
 import { motion } from "framer-motion";
 import React from "react";
-import { Button } from "./moving-border";
+import { Button } from "./Moving-border";
 
 const transition = {
   duration: 0,

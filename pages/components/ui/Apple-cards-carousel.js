@@ -7,10 +7,10 @@ import React, {
   useContext,
 } from "react";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/Utils";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import { useOutsideClick } from "pages/hooks/use-outside-click";
+import { useOutsideClick } from "pages/hooks/Use-outside-click";
 
 export const CarouselContext = createContext({
   onCardClose: () => {},
