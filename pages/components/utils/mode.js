@@ -1,6 +1,6 @@
 // ThemeToggleButton.js
 import React from "react";
-import { useTheme } from "./modeContext";
+import { useTheme } from "./ThemeContext";
 
 const ThemeToggleButton = () => {
   const { theme, toggleTheme } = useTheme();

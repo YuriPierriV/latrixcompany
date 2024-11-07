@@ -20,11 +20,9 @@ const CardTitle = ({ children, imgSrc, title, description }) => {
 
 const CardContainer = ({ children }) => {
   return (
-    <div className="flex container mx-auto relative max-w-7xl -mt-20 border border-black/[0.2] dark:border-white/[0.2] rounded-xl ">
+    <div className="flex container gap-0 mx-auto relative max-w-7xl -mt-20 border border-primary/[0.2] dark:primary/[0.5] shadow-primary shadow-md  rounded-xl p-10">
       <BackgroundBeams className="absolute inset-0 z-0 rounded-xl" />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center justify-center   ">
-        {children}
-      </div>
+      <div className="z-10">{children}</div>
     </div>
   );
 };

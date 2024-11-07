@@ -7,7 +7,7 @@ import lightImage from "../public/images/light.png";
 import darkImage from "../public/images/dark.png";
 
 import ThemeToggleButton from "@/utils/mode";
-import { useTheme } from "@/utils/modeContext";
+import { useTheme } from "@/utils/ThemeContext";
 
 function Navbar({ className }) {
   const [active, setActive] = useState(null);
