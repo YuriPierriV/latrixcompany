@@ -1,0 +1,40 @@
+import React from "react";
+import BackgroundBeams from "@/ui/Background-beams";
+
+const CardTitle = ({ children, imgSrc, title, description }) => {
+  return (
+    <div className="flex  flex-col ">
+      <div className="z-10 ">
+        <div className="flex flex-col items-start px-4 leading-normal">
+          <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+            {title}
+          </h5>
+          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            {description}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const CardContainer = ({ children }) => {
+  return (
+    <div className="flex container gap-0 mx-auto relative max-w-7xl -mt-20 border border-primary/[0.5] dark:primary/[0.5] shadow-primary shadow-[0_-25px_50px_-15px]  rounded-xl p-10">
+      <BackgroundBeams className="absolute inset-0 z-0 rounded-xl" />
+      <div className="z-10">{children}</div>
+    </div>
+  );
+};
+
+const Card = ({ title, description, children }) => {
+  return (
+    <CardContainer>
+      <CardTitle title={title} description={description} />
+      {children}
+    </CardContainer>
+  );
+};
+
+export { CardTitle, CardContainer };
+export default Card;
