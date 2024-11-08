@@ -15,6 +15,7 @@ import { dataTimeline } from "@/ui/Timeline";
 import { useTheme } from "@/utils/ThemeContext";
 
 import Form from "@/form/Form";
+import Footer from "@/Footer/Footer";
 
 import {
   card_dark_1,
@@ -27,13 +28,33 @@ import {
 } from "@/public/images/Images";
 
 function Inicio() {
-  const ref = React.useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
   const { theme } = useTheme();
+
+  const DummyContent = () => {
+    return (
+      <>
+        {[...new Array(3).fill(1)].map((_, index) => {
+          return (
+            <div
+              key={"dummy-content" + index}
+              className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+            >
+              <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+                <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                  The first rule of Apple club is that you boast about Apple
+                  club.
+                </span>{" "}
+                Keep a journal, quickly jot down a grocery list, and take
+                amazing class notes. Want to convert those notes to text? No
+                problem. Langotiya jeetu ka mara hua yaar is ready to capture
+                every thought.
+              </p>
+            </div>
+          );
+        })}
+      </>
+    );
+  };
 
   const data = [
     {
@@ -66,9 +87,9 @@ function Inicio() {
         <Navbar className="top-2" />
       </div>
       <section id="hero">
-        <HeroHighlight className="grid xl:grid-cols-2 gap-4 min-h-full  container mx-auto">
-          <div className="items-center grid grid-cols-1 justify-center pt-24  xl:py-20 gap-4">
-            <div className=" p-0">
+        <HeroHighlight className="grid xl:grid-cols-2 gap-4 xl:gap-0 min-h-full  container mx-auto">
+          <div className=" grid   pt-32 mx-auto  xl:py-24 gap-4 xl:gap-0">
+            <div className="">
               <motion.h1
                 initial={{
                   opacity: 0,
@@ -111,10 +132,26 @@ function Inicio() {
               marca ser vista, lembrada e amada. Alcançamos o público certo,
               impulsionando marcas a atingirem seu potencial máximo.
             </motion.p>
-            <div className="text-center xl:text-left   pb-5">
-              <button className="px-6 py-2 text-white bg-primary hover:bg-accent rounded-md transition duration-300 teste">
+            <div className="text-center xl:text-left  pt-5 xl:pt-0 pb-5">
+              <a
+                className="px-6 py-2 text-white bg-primary hover:bg-accent rounded-md transition duration-300 cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById("form");
+                  const offset = 80; // ajuste o valor conforme necessário
+                  const bodyRect = document.body.getBoundingClientRect().top;
+                  const elementRect = element.getBoundingClientRect().top;
+                  const elementPosition = elementRect - bodyRect;
+                  const offsetPosition = elementPosition - offset;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                  });
+                }}
+              >
                 Vamos Conversar
-              </button>
+              </a>
             </div>
           </div>
           <div className="">
@@ -149,40 +186,9 @@ function Inicio() {
         </h2>
         <Carousel items={cards} />
       </div>
+      <Footer></Footer>
     </main>
   );
 }
-
-const DummyContent = () => {
-  return (
-    <>
-      {[...new Array(3).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
-          >
-            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                The first rule of Apple club is that you boast about Apple club.
-              </span>{" "}
-              Keep a journal, quickly jot down a grocery list, and take amazing
-              class notes. Want to convert those notes to text? No problem.
-              Langotiya jeetu ka mara hua yaar is ready to capture every
-              thought.
-            </p>
-            <Image
-              src="https://assets.aceternity.com/macbook.png"
-              alt="Macbook mockup from Aceternity UI"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
-            />
-          </div>
-        );
-      })}
-    </>
-  );
-};
 
 export default Inicio;
