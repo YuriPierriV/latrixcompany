@@ -20,7 +20,7 @@ const CardTitle = ({ children, imgSrc, title, description }) => {
 
 const CardContainer = ({ children }) => {
   return (
-    <div className="flex container gap-0 mx-auto relative max-w-7xl -mt-20 border border-primary/[0.5] dark:primary/[0.5] shadow-primary shadow-[0_-25px_50px_-15px]  rounded-xl p-10">
+    <div className="flex container gap-0 mx-auto relative max-w-7xl -mt-20 border border-primary dark:primary shadow-primary shadow-[0_-25px_50px_-15px]  rounded-xl p-10">
       <BackgroundBeams className="absolute inset-0 z-0 rounded-xl" />
       <div className="z-10">{children}</div>
     </div>

@@ -14,7 +14,11 @@ const transition = {
 
 export const MenuItem = ({ setActive, active, item, children }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative py-4">
+    <div
+      onMouseEnter={() => setActive(item)}
+      onClick={() => setActive(item)}
+      className="relative py-4"
+    >
       <motion.p
         transition={{ duration: 0.3 }}
         className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white text-base"
@@ -68,10 +72,10 @@ export const ProductItem = ({ title, description, href, src }) => {
     <Link href={href} className="flex space-x-2">
       <Image
         src={src}
-        width={140}
+        width={90}
         height={70}
         alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
+        className="flex-shrink-0 rounded-md shadow-2xl max-h-28  object-cover object-bottom"
       />
       <div>
         <h4 className="text-xl font-bold mb-1 text-black dark:text-white">

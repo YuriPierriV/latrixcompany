@@ -14,18 +14,13 @@ import { dataTimeline } from "@/ui/Timeline";
 
 import { useTheme } from "@/utils/ThemeContext";
 
+import { Servicos } from "@/ui/Bentogrid";
+
 import Form from "@/form/Form";
 import Footer from "@/Footer/Footer";
 
-import {
-  card_dark_1,
-  card_white_1,
-  card_dark_2,
-  card_dark_3,
-  card_white_2,
-  card_white_3,
-  foguete,
-} from "@/public/images/Images";
+import { SocialMedia, TrafegoPago, LandingPage } from "@/public/images/Images";
+import { foguete } from "@/public/images/Images";
 
 function Inicio() {
   const { theme } = useTheme();
@@ -59,20 +54,20 @@ function Inicio() {
   const data = [
     {
       category: "Tráfego pago",
-      title: "Bom pra krl",
-      src: theme === "light" ? card_white_1 : card_dark_1,
+      title: "Expanda seu alcance com o público certo",
+      src: TrafegoPago(),
       content: <DummyContent />,
     },
     {
       category: "Social media",
-      title: "Felipe na tora",
-      src: theme === "light" ? card_white_2 : card_dark_2, // Usando o theme para definir o src
+      title: "Estratégias que dominam as redes",
+      src: SocialMedia(), // Usando o theme para definir o src
       content: <DummyContent />,
     },
     {
       category: "Landing pages",
-      title: "Toma",
-      src: theme === "light" ? card_white_3 : card_dark_3,
+      title: "Páginas feitas para resultados rápidos",
+      src: LandingPage(),
       content: <DummyContent />,
     },
   ];
@@ -82,7 +77,7 @@ function Inicio() {
   ));
 
   return (
-    <main>
+    <main className="bg-white dark:bg-black">
       <div className="relative w-full flex items-center justify-center">
         <Navbar className="top-2" />
       </div>
@@ -164,7 +159,7 @@ function Inicio() {
         </HeroHighlight>
       </section>
 
-      <div className="container min-w-full h-full flex justify-center bg-slate-200 dark:bg-[#212529] ">
+      <div className="container min-w-full h-full flex justify-center  ">
         <CardContainer>
           <div className="grid xl:grid-cols-2 gap-3">
             <div className="flex flex-col gap-0 w-full">
@@ -174,17 +169,20 @@ function Inicio() {
               />
               <Timeline data={dataTimeline} className="flex-1 " />
             </div>
-            <div className="row-span-2">
+            <div className="row-span-2 ">
               <Form className="h-full w-full " />
             </div>
           </div>
         </CardContainer>
       </div>
-      <div className="w-full h-full py-20  bg-slate-200 dark:bg-[#212529]">
+      <div className="w-full h-full pt-20  container mx-auto">
         <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
           Nossos serviços
         </h2>
         <Carousel items={cards} />
+      </div>
+      <div className="">
+        <Servicos></Servicos>
       </div>
       <Footer></Footer>
     </main>

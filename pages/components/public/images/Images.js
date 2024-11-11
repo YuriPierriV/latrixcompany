@@ -14,6 +14,10 @@ import dark from ".//dark.png";
 import light from ".//light.png";
 
 import foguete from ".//foguete.png";
+import engajamento from ".//engajamento.png";
+import meta from ".//meta.png";
+import conversao from ".//conversão.png";
+
 import Image from "next/image";
 
 import { useTheme } from "@/utils/ThemeContext";
@@ -29,15 +33,27 @@ export function Logo() {
   );
 }
 
-export {
-  card_dark_1,
-  card_dark_2,
-  card_dark_3,
-  card_white_1,
-  card_white_2,
-  card_white_3,
-  foguete,
-};
+export function Logo_src() {
+  const { theme } = useTheme();
+  return theme === "light" ? light : dark;
+}
+
+export function SocialMedia() {
+  const { theme } = useTheme();
+  return theme === "light" ? card_white_2.src : card_dark_2.src;
+}
+
+export function TrafegoPago() {
+  const { theme } = useTheme();
+  return theme === "light" ? card_white_1.src : card_dark_1.src;
+}
+
+export function LandingPage() {
+  const { theme } = useTheme();
+  return theme === "light" ? card_white_3.src : card_dark_3.src;
+}
+
+export { foguete, engajamento, conversao, meta };
 
 export default function Images() {
   return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
