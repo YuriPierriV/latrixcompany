@@ -304,3 +304,7 @@ const SkeletonFour = () => {
     </motion.div>
   );
 };
+
+export default function Theme() {
+  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+}
